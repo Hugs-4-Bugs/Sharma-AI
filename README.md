@@ -1,4 +1,4 @@
-# SHARMA - Virtual Assistant
+# Sharma-AI
 
 ## Overview
 
