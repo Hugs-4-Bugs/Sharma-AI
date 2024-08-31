@@ -1,7 +1,5 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
-const userInput = input.toLowerCase();
-
 
 let isResponding = false; // Flag to check if the assistant is currently responding
 
@@ -17,6 +15,12 @@ function speak(text) {
 
     // Get available voices
     const voices = synth.getVoices();
+
+
+    
+//    //getting an error while using this toLowerCase method
+//     const userInput = input.toLowerCase();  
+
 
     // Choose a female or Indian English voice if available
     let selectedVoice = voices.find(voice => voice.name.includes('Female') || voice.name.includes('Indian English'));
