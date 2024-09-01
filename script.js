@@ -7,6 +7,7 @@ let isResponding = false; // Flag to check if the assistant is currently respond
 function speak(text) {
     const synth = window.speechSynthesis;
     const utterThis = new SpeechSynthesisUtterance(text);
+
     
     // Set speech parameters
     utterThis.rate = 1;
