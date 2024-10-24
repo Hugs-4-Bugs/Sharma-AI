@@ -32,27 +32,31 @@
 
 
 
-from flask import Flask, jsonify
-import threading
-import time
-
-app = Flask(__name__)
-
-wake_word_detected = False
-
-@app.route('/status', methods=['GET'])
-def status():
-    global wake_word_detected
-    return jsonify({'wake_word_detected': wake_word_detected})
 
 
-def simulate_wake_word_detection():
-    global wake_word_detected
-    while True:
-        time.sleep(10)  # Simulate detection every 10 seconds
-        wake_word_detected = not wake_word_detected
 
-if __name__ == "__main__":
-    threading.Thread(target=simulate_wake_word_detection).start()
-    app.run(host='0.0.0.0', port=5001, debug=True)
+
+# from flask import Flask, jsonify
+# import threading
+# import time
+
+# app = Flask(__name__)
+
+# wake_word_detected = False
+
+# @app.route('/status', methods=['GET'])
+# def status():
+#     global wake_word_detected
+#     return jsonify({'wake_word_detected': wake_word_detected})
+
+
+# def simulate_wake_word_detection():
+#     global wake_word_detected
+#     while True:
+#         time.sleep(10)  # Simulate detection every 10 seconds
+#         wake_word_detected = not wake_word_detected
+
+# if __name__ == "__main__":
+#     threading.Thread(target=simulate_wake_word_detection).start()
+#     app.run(host='0.0.0.0', port=5001, debug=True)
 
